@@ -9,10 +9,10 @@
 <div id="ubicacion"></div>
 <script type="text/javascript">
 if(navigator.geolocation){
-	navigator.geolocation.getCurrentPosition(mostrarUbicacion);
+	navigator.geolocation.getCurrentPosition (mostrarUbicacion);
 } else{alert("¡Error!Este navegador no soporta la Geolocalizacion.");}
  function refrescarUbicacion(){
-	 navigator.geolocation.watchPosition(mostrar.ubicacion);}
+	 navigator.geolocation.watchPosition(mostrarubicacion);}
 	 </script>
      
      <!--Se escribe un mapa con la localizacion anterior-->
@@ -20,11 +20,11 @@ if(navigator.geolocation){
      <div id="mapholder"></div>
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFd0aiE5FttY8XRAFI9ecTSpgo2vP-qMk"></script>
      
-     <button onClick="cargamap()">Cargar mapa</button>
+     <button onClick="cargarmap()">Cargar mapa</button>
      <script type="text/javascript">
 	 var x=document.getElementById("demo");
-	 function cargamap(){
-		 navigator.geolocation.getCurrentPosition(showPosition,showError);
+	 function cargarmap(){
+		 navigator.geolocation.getCurrentPosition  (showPosition,showError);
 		 function showPosition(position)
 		 {
 			 lat=position.coords.latitude;
